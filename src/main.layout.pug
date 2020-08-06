@@ -1,6 +1,6 @@
 include ./mixins.pug
 
-<!DOCTYPE html>
+doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
@@ -10,6 +10,4 @@ html(lang="en")
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        block content
