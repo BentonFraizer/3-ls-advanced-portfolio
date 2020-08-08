@@ -1,0 +1,39 @@
+.square-btns {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 106px;
+  background: #333C49;
+}
+
+.square-btns__item {
+  padding: 0;
+  width: 54px;
+  height: 53px;
+  position: relative;
+
+  &:first-child:before {
+    display: block;
+    content: '';
+    background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+    height: 19px;
+    width: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:last-child:after {
+    display: block;
+    content: '';
+    background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+    height: 19px;
+    width: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    opacity: .5;
+  }
+}

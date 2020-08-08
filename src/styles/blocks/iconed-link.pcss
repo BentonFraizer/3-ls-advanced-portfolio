@@ -1,0 +1,19 @@
+.iconed-link {
+  color: #586ED3;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+  padding-left: 37px;
+
+  &:before {
+    display: inline-block;
+    content: '';
+    background: svg-load('link1.svg', fill=#586ED3, width=23px, height=24px);
+    width: 23px;
+    height: 24px;
+    position: absolute;
+    left: -2px;
+    bottom: 2px;
+  }
+}

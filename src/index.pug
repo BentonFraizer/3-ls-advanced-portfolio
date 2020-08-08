@@ -77,6 +77,35 @@ block content
                         .skill 
                           svg(viewBox="0 0 100 100").skill_circle-shape
                             circle(cx="50" cy="50" r="40").skill__circle.skill__circle--layer--under
-                            circle(cx="50" cy="50" r="40" stroke="#D5811E" transform="rotate(180 50 50)").skill__circle.skill__circle--layer--above
+                            circle(cx="50" cy="50" r="40" stroke="url(#gradient)" transform="rotate(180 50 50)").skill__circle.skill__circle--layer--above
                             linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0%")
+                              stop(offset="0%" stop-color="#D0731B")
+                              stop(offset="100%" stop-color="#DC9322")
                           .skill__title #{skill}
+    section.works
+      .container
+        .section-title Мои работы
+        .works__content
+          .works-preview 
+            .works-preview__pictures(data-slide="2")
+              +image("content/slider-1.jpg", "works-preview__image")
+              .works-preview__thumbs
+                ul.thumbs
+                  - for (var i = 4; i > 0; i--)
+                    li.thumbs__item
+                      a(href="").thumbs__link
+                        +image(`content/slider-${i}.jpg`, "thumbs__pic")
+              .works-preview__btns
+                .square-btns
+                  button(type="button").square-btns__item.square-btns__item--next
+                  button(type="button").square-btns__item.square-btns__item--prev
+            .works-preview__info
+              - var tags = ["HTML", "CSS", "JavaScript"];
+              ul.tags
+                each item in tags
+                  li.tags__item
+                    .tag #{item}
+              .works-preview__title Сайт школы образования
+              .works-preview__desc
+                p Этот парень проходил обучение #[br] веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              a(href="").iconed-link Посмотреть сайт

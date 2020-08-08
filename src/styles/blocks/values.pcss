@@ -1,5 +1,14 @@
 .values {
-  background: url('~images/bg/values-hands-bg.png') left bottom -90px no-repeat;
+  background:  url('~images/bg/values-bg.jpg') center top / cover no-repeat;
+  position: relative;
+  
+  &::before {
+    content: url("~images/bg/values-hands-bg.png");
+    position: absolute;
+    top: 15%;
+    left: 0;
+    z-index: 1;
+  }
 }
 
 .values__container {

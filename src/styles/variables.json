@@ -1,5 +1,6 @@
 {
   "text-color": "#fff",
+  "text-color-works": "#333C49",
   "links-color": "#4b6fd7",
   "errors-color": "#cd1515",
   "bp-desktop-hd": "1800px",
