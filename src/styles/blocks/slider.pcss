@@ -1,0 +1,46 @@
+.slider {
+  padding-top: 131px;
+}
+
+.slider__header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 638px;
+}
+
+.slider__title {
+  padding-top: 4px;
+  margin-bottom: 12%;
+}
+
+.slider__btn {
+  margin-right: 28px;
+  padding: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.slider__content {
+  display: flex;
+}
+
+.slider__item {
+  position: relative;
+  margin-left: 98px;
+  margin-right: 75px;
+  max-width: 330px;
+  
+  
+  &:before {
+    display: block;
+    content: '';
+    background: svg-load('quote.svg', fill=#303133, width=82px, height=68px);
+    width: 82px;
+    height: 68px;
+    position: absolute;
+    top: 2%;
+    right: 106%;
+  }
+}

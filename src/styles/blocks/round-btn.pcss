@@ -1,0 +1,32 @@
+.round-btn {
+  width: 53px;
+  height: 53px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 3%;
+
+  &:first-child:before {
+    display: block;
+    content: '';
+    background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+    height: 19px;
+    width: 12px;
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%)rotate(180deg);
+  }
+
+  &:last-child:after {
+    display: block;
+    content: '';
+    background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+    height: 19px;
+    width: 12px;
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%); 
+  }
+}
