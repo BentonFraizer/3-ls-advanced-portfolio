@@ -7,12 +7,20 @@
   left: 0;
   bottom: 0;
   right: 0;
+
+  @include desktop {
+    padding: 63px 0 58px 0;
+  }
 }
 
 .footer__container {
   display: flex;
   justify-content: space-between;
   min-height: 228px;
+  
+  @include desktop {
+    width: 90%;
+  }
 }
 
 .footer__copyright {
@@ -20,16 +28,28 @@
   display: flex;
   color: rgba(#fff, .1);
   justify-content: space-between;
+
+  @include desktop {
+    flex-direction: column;
+  }
 }
 
 .footer__copyright-col {
   flex: 1;
   margin-top: -14px;
+
+  @include desktop {
+    margin-top: 0;
+  }
 }
 
 .footer__copyright-userinfo {
   width: 41%;
   padding-top: 2px;
+
+  @include desktop {
+    width: 53%;
+  }
 }
 
 .footer__copyright-name {
@@ -39,22 +59,42 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 19px;
+
+  @include desktop {
+    margin-bottom: 25px;
+  }
 }
 
 .footer__copyright-year {
   font-weight: 600;
   font-size: 48px;
   white-space: nowrap;
+
+  @include desktop {
+    margin-bottom: 3px;
+    letter-spacing: 1.6px;
+  }
 }
 
 .footer__data-text {
   margin-bottom: 52px;
+
+  @include desktop {
+    margin-bottom: 32px;
+    line-height: 2;
+    letter-spacing: .6px;
+  }
 }
 
 .footer__data {
   width: 66.3%;
   padding-top: 7px;
   padding-right: 3.8%;
+
+  @include desktop {
+    width: 74.6%;
+    padding-right: 0;
+  }
 }
 
 .footer__data-menu {
@@ -66,6 +106,15 @@
 
   .menu__item {
     margin-right: 6.5%;
+
+    @include desktop {
+      margin-right: 8%;
+      letter-spacing: .4px;
+    }
+  }
+
+  @include desktop {
+    margin-top: 17px;
   }
 }
 
@@ -80,6 +129,13 @@
 
 .footer__data-col {
   width: 46%;
+
+  @include desktop {
+    &:last-child {
+      width: 55%;
+      letter-spacing: .6px;
+    }
+  }
 }
 
 .text-quote__author {
@@ -91,6 +147,10 @@
 .text-quote__text {
   margin-bottom: 29px;
   line-height: 1.9;
+
+  @include desktop {
+    line-height: 2;
+  }
 }
 
 .footer .socials__item {
@@ -111,5 +171,27 @@
     opacity: .3;
     left: -56%;
     top: -43%;
+  }
+
+  @include desktop {
+    margin-right: 13%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #fff;
+      border-radius: 100px;
+      opacity: .3;
+      left: -50%;
+      top: -37%;
+    }
+  }
+}
+
+.footer__copyright {
+  @include desktop {
+    display: block;
   }
 }

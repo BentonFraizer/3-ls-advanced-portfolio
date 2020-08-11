@@ -51,6 +51,11 @@
   border-radius: 50%;
   width: 75px;
   height: 75px;
+
+  @include desktop {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .user-display {
@@ -74,4 +79,7 @@
 
 .user-display__avatar {
   margin-right: 31px;
+  @include desktop {
+    margin-right: 9%;
+  }
 }

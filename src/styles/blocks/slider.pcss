@@ -1,16 +1,29 @@
 .slider {
   padding-top: 131px;
+
+  @include desktop {
+    padding-top: 151px;
+  }
 }
 
 .slider__header {
   display: flex;
   justify-content: space-between;
   max-width: 638px;
+  
+  @include desktop {
+    max-width: 680px;
+  }
 }
 
 .slider__title {
   padding-top: 4px;
   margin-bottom: 12%;
+
+  @include desktop {
+    letter-spacing: 1.3px;
+    margin-bottom: 12.5%;
+  }
 }
 
 .slider__btn {
@@ -19,6 +32,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include desktop {
+    margin-right: 34px;
   }
 }
 
@@ -42,5 +59,11 @@
     position: absolute;
     top: 2%;
     right: 106%;
+  }
+
+  @include desktop {
+    margin-left: 9%;
+    margin-right: 6.5%;
+    max-width: 360px;
   }
 }
