@@ -1,6 +1,10 @@
 .tags {
   display: flex;
   margin-bottom: 8%;
+
+  @include desktop {
+    margin-bottom: 11%;
+  }
 }
 
 .tags__item {
@@ -11,6 +15,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include desktop {
+    margin-right: 4%;
   }
 }
 

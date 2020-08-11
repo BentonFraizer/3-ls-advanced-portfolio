@@ -4,6 +4,10 @@
   position: relative;
   min-height: 106px;
   background: #333C49;
+
+  @include desktop {
+    min-height: 75px;
+  }
 }
 
 .square-btns__item {
@@ -35,5 +39,35 @@
     left: 50%;
     transform: translate(-50%, -50%) rotate(180deg);
     opacity: .5;
+  }
+
+  @include desktop {
+    width: 35px;
+    height: 35px;
+
+    &:first-child:before {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=8px, height=15px);
+      height: 15px;
+      width: 8px;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:last-child:after {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=8px, height=15px);
+      height: 15px;
+      width: 8px;
+      position: absolute;
+      top: 61%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      opacity: .5;
+    }
   }
 }

@@ -2,6 +2,10 @@ section.works {
   color: $text-color-works;
 }
 
+.works__container {
+  width: 90%;
+}
+
 .works-preview {
   display: flex;
   justify-content: space-between;
@@ -14,14 +18,23 @@ section.works {
 
 .works__title {
   padding-top: 196px;
+  
+  @include desktop {
+    padding-top: 158px;
+    letter-spacing: 1.5px;
+  }
 }
 
 .works__content {
   padding-top: 82px;
+
+  @include desktop {
+    padding-top: 90px;
+  }
 }
 
 .works-preview__pictures {
-  width: 65%;
+  max-width: 65%;
   height: 549px;
   position: relative;
 
@@ -37,6 +50,24 @@ section.works {
     transform: translateX(175px);
     z-index: -1;
   }
+
+  @include desktop {
+    max-width: 59%;
+    height: 380px;
+
+    &:after {
+      content: attr(data-slide);
+      position: absolute;
+      top: 13%;
+      right: 34px;
+      line-height: 1;
+      font-weight: 800;
+      font-size: 320px;
+      color: #E6E6E6;
+      transform: translateX(175px);
+      z-index: -1;
+    }
+  }
 }
 
 .works-preview__image {
@@ -48,10 +79,20 @@ section.works {
   right: 0;
   bottom: 60px;
   width: 712px;
+
+  @include desktop {
+    bottom: 35px;
+    width: 505px;
+  }
 }
 
 .works-preview__info {
   max-width: 364px;
+
+  @include desktop {
+    max-width: 347px;
+    margin-right: -9px;
+  }
 }
 
 .thumbs__item {
@@ -63,19 +104,35 @@ section.works {
   width: 54px;
   left: 100%;
   bottom: 56px;
+
+  @include desktop {
+    width: 35px;
+    bottom: 36px;
+  }
 }
 
 .works-preview__title {
   font-weight: bold;
   font-size: 30px;
   margin-bottom: 9%;
+  
+  @include desktop {
+    margin-bottom: 11%;
+    letter-spacing: 1.5px;
+  }
 }
 
 .works-preview__desc p {
   font-weight: 600;
   font-size: 16px;
   color: rgba(51, 60, 73, 0.8);
-  max-width: 335px;
+  max-width: 346px;
   line-height: 1.9;
   margin-bottom: 13%;
+
+  @include desktop {
+    line-height: 2;
+    letter-spacing: .5px;
+    margin-bottom: 14%;
+  }
 }
