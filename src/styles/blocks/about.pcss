@@ -4,32 +4,51 @@
   align-items: center;
   justify-content: center;
   min-height: 650px;
+  letter-spacing: .5px;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
 }
 
 .about__user {
   width: 35%;
+  @include desktop {
+    margin-right: 7.7%;
+  }
 }
 
 .about__content {
   flex: 1;
   max-width: 38%;
+
+  @include desktop {
+    max-width: 52%;
+    margin-top: -3%;
+  }
 }
 
 .about__desc {
   font-weight: 600;
   opacity: .8;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .about__title {
   font-weight: bold;
   font-size: 36px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+}
+
+.about__content .about__title {
+  @include desktop {
+    letter-spacing: 1.5px;
+  }
 }
 
 .about__text-info {
   font-weight: 600;
-  margin-bottom: 49px;
+  margin-bottom: 75px;
   line-height: 1.9;
 }
 

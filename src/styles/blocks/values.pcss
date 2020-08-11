@@ -1,3 +1,9 @@
+section.values {
+  @include desktop {
+    min-height: 1020px;
+  }
+}
+
 .values {
   background:  url('~images/bg/values-bg.jpg') center top / cover no-repeat;
   position: relative;
@@ -9,28 +15,54 @@
     left: 0;
     z-index: 1;
   }
+  
+  @include desktop {
+    &::before {
+    content: url("~images/bg/values-hands-bg-1200.png");
+    position: absolute;
+    top: 37%;
+    left: 0;
+    z-index: 1;
+    }
+  }
 }
 
 .values__container {
   padding-top: 142px;
+  
+  @include desktop {
+    padding-top: 154px;
+  }
 }
 
 .values__widget {
   display: flex;
   justify-content: flex-end;
   padding: 5.3% 13.5% 0 0;
+
+  @include desktop {
+    padding: 0 10.5% 0 0;
+  }
 }
 
 .values__title {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  @include desktop {
+    margin-bottom: 100px;
+  }
 }
 
 .values__title-text {
   font-weight: bold;
   font-size: 30px;
   margin-bottom: 3.5%;
+
+  @include desktop {
+    padding-left: 26.3%;
+    letter-spacing: 1.2px;
+  }
 }
 
 .values__content p {
@@ -39,6 +71,12 @@
   opacity: .8;
   padding: 0 23% 0 33%;
   line-height: 1.9;
+
+  @include desktop {
+    padding: 0 20% 0 26.5%;
+    letter-spacing: .6px;
+    line-height: 2;
+  }
 }
 
 .skills-row__title {

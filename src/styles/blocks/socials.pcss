@@ -3,10 +3,17 @@
 }
 
 svg.socials__icon {
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  height: 27px;
   fill: $text-color;
   opacity: .3;
+  transition: .3s;
+
+  &:hover {
+    transition: .3s;
+    fill: #ff9a00;
+    opacity: 1;
+  }
 }
 
 .socials__item {
@@ -14,5 +21,10 @@ svg.socials__icon {
   
   &:last-child {
     margin-right: 0;
+  }
+
+  @include desktop {
+    margin-right: 42px;
+    margin-top: 10px;
   }
 }
