@@ -1,14 +1,32 @@
+section.hero {
+  @include tablets {
+    min-height: 1250px;
+    background: url('~images/bg/hero-768.jpg') center top / cover no-repeat;
+  }
+
+  @include phones {
+    min-height: 635px;
+  }
+}
 .hero__container {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 57px 0 40px;
+
+  @include tablets {
+    justify-content: flex-start;
+  }
 }
 
 .hero__bottom-buttons {
   display: flex;
   justify-content: center;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 svg.scroll-down-icon {

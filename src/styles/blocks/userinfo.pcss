@@ -7,6 +7,13 @@
     line-height: 1.8;
     letter-spacing: 1px;
   }
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 14%;
+  }
 }
 
 .userinfo__title {
@@ -19,6 +26,21 @@
   @include desktop {
     margin-right: 40px;
   }
+
+  @include tablets {
+    text-align: center;
+    margin-right: 0;
+    font-size: 1.9vmin;
+    letter-spacing: 1.2px;
+    line-height: 2.2;
+    margin-bottom: 30px;
+  }
+
+  @include phones {
+    font-size: 4vmin;
+    line-height: 1.5;
+    margin-bottom: 7px;
+  }
 }
 
 .userinfo__name {
@@ -30,5 +52,16 @@
   @include desktop {
     letter-spacing: 3px;
     line-height: .91;
+  }
+
+  @include tablets {
+    font-size: 5.9vmin;
+    line-height: 1.1;
+    letter-spacing: 4px;
+  }
+
+  @include phones {
+    font-size: 10vmin;
+    line-height: 1.5;
   }
 }

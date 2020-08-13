@@ -1,6 +1,11 @@
 .user {
   flex-direction: column;
   display: flex;
+
+  @include phones {
+    min-width: 90%;
+    margin-bottom: 32px;
+  }
 }
 
 .user__avatar-style {
@@ -15,6 +20,17 @@
     height: 213px;
     margin-right: 6px;
   }
+
+  @include tablets {
+    width: 228px;
+    height: 228px;
+    margin-right: 27px;
+  }
+
+  @include phones {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .user__avatar {
@@ -23,6 +39,11 @@
   @include desktop {
     margin-top: 3px;
     margin-bottom: 64px;
+  }
+
+  @include tablets {
+    margin-bottom: 11px;
+    margin-top: 17px;
   }
 }
 
@@ -34,6 +55,10 @@
 
     td.user__data-content {
       padding-left: 53px;
+
+      @include tablets {
+        padding-left: 30px;
+      }
     }
 
     td {

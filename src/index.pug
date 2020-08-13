@@ -19,6 +19,10 @@ block content
               li.socials__item
                 a(href='#').socials__link
                   +icon(item, 'socials__icon')
+          a(href='#').hamburger#hamburger
+            span.hamburger__plank
+            span.hamburger__plank
+            span.hamburger__plank
 
         .userinfo
           .userinfo__title Личный сайт #[br] веб разработчика
@@ -50,7 +54,7 @@ block content
           .about__desc Привет, меня зовут
           .about__title Владимир Астаханов
           .about__text-info
-            p Я занимаюсь разработкой современных сайтов и приложений. #[br] Мне нравится делать интересные и современные проекты.
+            p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
           .about__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
   .middle-section
     section.values
@@ -107,7 +111,7 @@ block content
                     .tag #{item}
               .works-preview__title Сайт школы образования
               .works-preview__desc
-                p Этот парень проходил обучение #[br] веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
               a(href="").iconed-link Посмотреть сайт
     section.reviews
       .container.reviews__container
@@ -163,9 +167,10 @@ block content
                 .footer__data-socials
                   ul.socials.socials--round-borders
                     each item in socials
-                      li.socials__item
-                        a(href="#").socials__link
-                          +icon(item, 'socials__icon')
+                      li.socials__item-borders
+                          .socials__item
+                            a(href="#").socials__link
+                              +icon(item, 'socials__icon')
               .footer__data-col
                 .text-quote
                   .text-quote__text
