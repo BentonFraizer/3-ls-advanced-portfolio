@@ -28,7 +28,7 @@ section.values {
     &::before {
       content: url("~images/bg/values-hands-bg-1200.png");
       position: absolute;
-      top: 37%;
+      top: 32.5%;
       left: 0;
       z-index: 1;
     }
@@ -60,16 +60,16 @@ section.values {
 }
 
 .values__container {
-  padding-top: 142px;
+  padding-top: 180px;
   z-index: 1;
   width: 90%;
   
   @include desktop {
-    padding-top: 154px;
+    padding-top: 85px;
   }
 
   @include tablets {
-    padding-top: 50px;
+    padding-top: 103px;
     text-align: center;
   }
 
@@ -82,10 +82,9 @@ section.values {
 .values__widget {
   display: flex;
   justify-content: flex-end;
-  padding: 5.3% 13.5% 0 0;
 
   @include desktop {
-    padding: 0 10.5% 0 0;
+    padding: 0;
   }
 
   @include tablets {
@@ -97,13 +96,16 @@ section.values {
 .values__title {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
 
   @include desktop {
-    margin-bottom: 100px;
+    margin-bottom: 102px;
   }
 
   @include tablets {
     margin-bottom: 57px;
+    text-align: center;
   }
 
   @include phones {
@@ -119,14 +121,18 @@ section.values {
   z-index: 1;
 
   @include desktop {
-    padding-left: 26.3%;
+    padding-right: 5.5%;
+    text-align: left;
     letter-spacing: 1.2px;
+    margin-bottom: 42px;
   }
 
   @include tablets {
     padding: 0 25%;
-    font-size: 32px;
-    margin-bottom: 35px;
+    font-size: 33px;
+    margin-bottom: 32px;
+    text-align: center;
+    letter-spacing: .8px;
   }
 
   @include phones {
@@ -145,13 +151,13 @@ section.values {
   line-height: 1.9;
 
   @include desktop {
-    padding: 0 20% 0 26.5%;
+    padding: 0 19% 0 25.5%;
     letter-spacing: .6px;
     line-height: 2;
   }
 
   @include tablets {
-    padding: 0 17%;
+    padding: 0 16%;
     letter-spacing: 0;
     line-height: 1.75;
   }

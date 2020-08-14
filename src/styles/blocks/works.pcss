@@ -1,6 +1,15 @@
 section.works {
   color: $text-color-works;
   min-height: 1120px;
+
+  @include desktop {
+    min-height: 840px;
+    height: 100%;
+  }
+
+  @include tablets {
+    min-height: 1120px;
+  }
 }
 
 .works__container {
