@@ -3,6 +3,14 @@ section.reviews {
     min-height: 1136px;
     background: url('~images/bg/reviews-bg.jpg') top right / cover no-repeat;
   }
+
+  @include tablets {
+    min-height: 1206px;
+  }
+
+  @include tablets {
+    min-height: 1421px;
+  }
 }
 
 .reviews {
@@ -11,4 +19,8 @@ section.reviews {
 
 .reviews__container{
   width: 90%;
+
+  @include phones {
+    width: 82%;
+  }
 }

@@ -81,6 +81,11 @@
     width: 80px;
     height: 80px;
   }
+
+  @include tablets {
+    width: 85px;
+    height: 85px;
+  }
 }
 
 .user-display {
@@ -94,6 +99,10 @@
   font-size: 18px;
   margin-top: 7px;
   margin-bottom: 13px;
+
+  @include tablets {
+    margin-top: 2px;
+  }
 }
 
 .user-display__occ {
@@ -104,7 +113,16 @@
 
 .user-display__avatar {
   margin-right: 31px;
+  
   @include desktop {
     margin-right: 9%;
+  }
+  
+  @include tablets {
+    margin-right: 7%;
+  }
+
+  @include phones {
+    margin-right: 6%;
   }
 }

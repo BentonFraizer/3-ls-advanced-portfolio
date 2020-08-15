@@ -16,9 +16,14 @@ section.about {
   align-items: center;
   justify-content: center;
   letter-spacing: .5px;
+  height: 100vh;
 
   @include desktop {
     justify-content: flex-start;
+  }
+
+  @include tablets {
+    height: 100%;
   }
 
   @include phones {

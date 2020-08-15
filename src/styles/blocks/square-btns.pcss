@@ -70,4 +70,34 @@
       opacity: .5;
     }
   }
+
+  @include phones {
+    width: 62px;
+    height: 63px;
+
+    &:first-child:before {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+      height: 21px;
+      width: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:last-child:after {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+      height: 21px;
+      width: 12px;
+      position: absolute;
+      top: 49%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      opacity: .5;
+    }
+  }
 }

@@ -9,7 +9,15 @@
   right: 0;
 
   @include desktop {
-    padding: 63px 0 58px 0;
+    padding: 75px 0 56px;
+  }
+  
+  @include tablets {
+    padding: 64px 0 124px;
+  }
+
+  @include phones {
+    padding: 64px 0 98px;
   }
 }
 
@@ -21,6 +29,12 @@
   @include desktop {
     width: 90%;
   }
+
+  @include phones {
+    flex-direction: column;
+    width: 84%;
+    padding-left: 1.5%;
+  }
 }
 
 .footer__copyright {
@@ -31,6 +45,17 @@
 
   @include desktop {
     flex-direction: column;
+    display: block;
+  }
+
+  @include tablets {
+    margin-right: 10.5%;
+  }
+
+  @include phones {
+    display: flex;
+    margin-right: 0;
+    width: 100%;
   }
 }
 
@@ -41,6 +66,10 @@
   @include desktop {
     margin-top: 0;
   }
+
+  @include tablets {
+    margin-bottom: 18px;
+  }
 }
 
 .footer__copyright-userinfo {
@@ -49,6 +78,10 @@
 
   @include desktop {
     width: 53%;
+  }
+
+  @include tablets {
+    width: 100%;
   }
 }
 
@@ -63,6 +96,16 @@
   @include desktop {
     margin-bottom: 25px;
   }
+
+  @include tablets {
+    letter-spacing: 2px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    margin-bottom: 7px;
+  }
 }
 
 .footer__copyright-year {
@@ -74,6 +117,11 @@
     margin-bottom: 3px;
     letter-spacing: 1.6px;
   }
+  
+  @include tablets {
+    font-size: 53px;
+    line-height: 1;
+  }
 }
 
 .footer__data-text {
@@ -83,6 +131,16 @@
     margin-bottom: 32px;
     line-height: 2;
     letter-spacing: .6px;
+  }
+
+  @include tablets {
+    line-height: 1.7;
+    letter-spacing: 0;
+    margin-bottom: 25px;
+  }
+
+  @include phones {
+    margin-bottom: 28px;
   }
 }
 
@@ -95,6 +153,14 @@
     width: 74.6%;
     padding-right: 0;
   }
+
+  @include tablets {
+    padding: 0;
+  }
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .footer__data-menu {
@@ -102,6 +168,16 @@
   
   .menu__list {
     justify-content: flex-start;
+
+    @include tablets {
+      padding: 0;
+    }
+
+    @include phones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   .menu__item {
@@ -111,16 +187,39 @@
       margin-right: 8%;
       letter-spacing: .4px;
     }
+
+    @include tablets {
+      margin-right: 11.8%;
+      letter-spacing: .1px;
+    }
+
+    @include phones {
+      margin-right: 0;
+      line-height: 2.9;
+    }
   }
 
   @include desktop {
     margin-top: 17px;
+  }
+
+  @include tablets {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  @include phones {
+    white-space: nowrap;
   }
 }
 
 .footer__data-content {
   display: flex;
   justify-content: space-between;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .footer__data-col {
@@ -132,31 +231,30 @@
       letter-spacing: .6px;
     }
   }
-}
 
-.text-quote__author {
-  font-style: italic;
-  font-size: 16px;
-  color: #fff;
-}
+  @include tablets {
+    width: 100%;
+    margin-bottom: 58px;
 
-.text-quote__text {
-  margin-bottom: 29px;
-  line-height: 1.9;
+    &:last-child {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
 
-  @include desktop {
-    line-height: 2;
+  @include phones {
+    margin-bottom: 36px;
   }
 }
 
 .footer .socials__item-borders {
   position: relative;
-  width: 50px;
+  min-width: 50px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   transition: .3s;
-  margin-right: 20px;
+  margin-right: 5%;
 
   &:hover {
     transition: .3s;
@@ -168,6 +266,20 @@
       opacity: 1;
     }
   }
+
+  @include desktop {
+    margin-right: 6.5%;
+  }
+
+  @include tablets {
+    min-width: 57px;
+    height: 57px;
+    margin-right: 4.4%;
+  }
+
+  @include phones {
+    margin-right: 0;
+  }
 }
 
 .footer .socials__item {
@@ -176,7 +288,8 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+  margin-top: 0;
+
   &:last-child {
     margin-right: 0;
   }
@@ -184,10 +297,14 @@
   @include desktop {
     margin-right: 13%;
   }
+
+  @include tablets {
+    padding: 0;
+  }
 }
 
-.footer__copyright {
-  @include desktop {
-    display: block;
+.footer__data-socials .socials {
+  @include phones {
+    display: flex;
   }
 }
