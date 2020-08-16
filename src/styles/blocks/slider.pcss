@@ -79,11 +79,11 @@
   }
 }
 
-.slider__item {
-  position: relative;
-  margin-left: 98px;
-  margin-right: 75px;
-  max-width: 330px;
+/* Был класс .slider__item*/
+.swiper-slide { 
+  margin-left: 8.1%;
+  margin-right: 1%;
+  max-width: 41%;
 
   &:before {
     display: block;
@@ -96,16 +96,7 @@
     right: 106%;
   }
 
-  @include desktop {
-    margin-left: 9%;
-    margin-right: 6.5%;
-    max-width: 360px;
-  }
-
   @include tablets {
-    margin-left: 6%;
-    margin-right: 4%;
-    max-width: 360px;
 
     &:last-child {
       margin-right: 0;
@@ -127,9 +118,6 @@
     &:before {
       display: none;
     }
-    flex: 0 0 70vmin;
-    margin-left: 0;
     min-width: 100%;
-    margin-right: 20%;
   }
 }

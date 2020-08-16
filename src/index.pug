@@ -73,37 +73,8 @@ block content
 
     section.reviews
       .container.reviews__container
-        .slider
-          .slider__header
-            .section-title.slider__title Что обо мне говорят
-            .slider__buttons
-              button(type="button").slider__btn.round-btn.round-btn--pointer-right 
-              button(type="button").slider__btn.round-btn.round-btn--pointer-left
-          ul.slider__content
-            li.slider__item
-              .quote
-                .quote__text
-                  p Этот парень проходил обучение #[br] веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                .quote__user
-                  .user-display
-                    .user-display__avatar
-                      .user-display__avatar-style
-                        +image("content/kovalchuk.jpg", "user-display__pic", "director-photo")
-                    .user-display__data
-                      .user-display__name Ковальчук Дмитрий
-                      .user-display__occ Основатель Loftschool
-            li.slider__item
-              .quote
-                .quote__text
-                  p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                .quote__user
-                  .user-display
-                    .user-display__avatar
-                      .user-display__avatar-style
-                        +image("content/sabantsev.jpg", "user-display__pic", "web-master-photo")
-                    .user-display__data
-                      .user-display__name Владимир Сабанцев
-                      .user-display__occ Преподаватель
+        #slider-component
+        
       footer.footer
         .container.footer__container
           .footer__copyright
