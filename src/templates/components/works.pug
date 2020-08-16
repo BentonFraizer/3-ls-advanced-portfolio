@@ -1,0 +1,40 @@
+script(type="text/x-template")#preview-container
+  .works-preview
+    display
+    info
+    
+script(type="text/x-template")#preview-display
+  .works-preview__pictures(data-slide="2")
+    +image("content/slider-1.jpg", "works-preview__image", "work-preview-image")
+    .works-preview__thumbs
+      thumbs
+    .works-preview__btns
+      btns
+
+script(type="text/x-template")#preview-thumbs
+  ul.thumbs
+    - for (var i = 4; i > 0; i--)
+      li.thumbs__item(class= (i === 4 ? "active" : undefined))
+        a(href="").thumbs__link
+          +image(`content/slider-${i}.jpg`, "thumbs__pic", "thumbs-picture")
+
+script(type="text/x-template")#preview-btns
+  .square-btns 
+    button(type="button").square-btns__item.square-btns__item--next
+    button(type="button").square-btns__item.square-btns__item--prev
+
+script(type="text/x-template")#preview-info
+  .works-preview__info
+    .works-prewiew__tags
+      tags
+    .works-preview__title Сайт школы образования
+    .works-preview__desc
+      p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+    a(href="").iconed-link Посмотреть сайт
+
+script(type="text/x-template")#preview-tags
+  - var tags = ["HTML", "CSS", "JavaScript"];
+  ul.tags
+    each item in tags
+      li.tags__item
+        .tag #{item}
