@@ -4,8 +4,30 @@
   color: rgba(#fff, .6);
   min-height: 120px;
   margin-bottom: 9.5%;
+
+  @include desktop {
+    margin-bottom: 33px;
+  }
+
+  @include tablets {
+    margin-bottom: 25px;
+  }
+
+  @include phones {
+    margin-bottom: 20px;
+  }
 }
 
 .quote__text p {
   line-height: 1.9;
+
+  @include desktop {
+    line-height: 2;
+    letter-spacing: .6px;
+  }
+  
+  @include tablets {
+    letter-spacing: 0;
+    line-height: 1.75;
+  }
 }

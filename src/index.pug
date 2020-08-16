@@ -5,7 +5,7 @@ block content
     section.hero
       .container.hero__container
         header.header
-          a.logo(href='#') ВА
+          a.logo(href='#') ЮЛ
           nav.menu
             - var menuItems = ['Обо мне', 'Навыки', 'Работы', 'Отзывы']
             ul.menu__list
@@ -19,10 +19,14 @@ block content
               li.socials__item
                 a(href='#').socials__link
                   +icon(item, 'socials__icon')
+          a(href='#').hamburger#hamburger
+            span.hamburger__plank
+            span.hamburger__plank
+            span.hamburger__plank
 
         .userinfo
           .userinfo__title Личный сайт #[br] веб разработчика
-          .userinfo__name Владимир Астаханов
+          .userinfo__name Юрий Лопухин
 
         .hero__bottom-buttons
           button.scroll-down-btn Скролл
@@ -36,9 +40,9 @@ block content
                 +image("content/user.jpg", "user__avatar-pic", "user-avatar-image")
             - 
               var userInfo = [
-                ["Проживаю:", "Новосибирск"],
-                ["Возраст:", "27 лет"],
-                ["Родился:", "1 января 1991"],
+                ["Проживаю:", "Санкт-Петербург"],
+                ["Возраст:", "31 год"],
+                ["Родился:", "2 июня 1989"],
               ];
 
             table.user__data
@@ -48,9 +52,9 @@ block content
                   td.user__data-content #{item[1]}
         .about__content
           .about__desc Привет, меня зовут
-          .about__title Владимир Астаханов
+          .about__title Юрий Лопухин
           .about__text-info
-            p Я занимаюсь разработкой современных сайтов и приложений. #[br] Мне нравится делать интересные и современные проекты.
+            p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
           .about__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
   .middle-section
     section.values
@@ -60,96 +64,25 @@ block content
           .values__content
             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         .values__widget
-          -
-            var skillsCategories = [
-              ["Front-end", ["HTML5", "CSS3", "Javascript", "Jquery и Vue.js"]],
-              ["Workflow", ["GIT", "Terminal", "Gulp", "Webpack"]],
-            ];
-
-          ul.skills
-            each category in skillsCategories
-              li.skills__item
-                .skills-row
-                  .skills-row__title #{category[0]}
-                  ul.skills-row__list
-                    each skill in category[1]
-                      li.skills-row__item
-                        .skill 
-                          svg(viewBox="0 0 100 100").skill_circle-shape
-                            circle(cx="50" cy="50" r="40").skill__circle.skill__circle--layer--under
-                            circle(cx="50" cy="50" r="40" stroke="url(#gradient)" transform="rotate(180 50 50)").skill__circle.skill__circle--layer--above
-                            linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0%")
-                              stop(offset="0%" stop-color="#D0731B")
-                              stop(offset="100%" stop-color="#DC9322")
-                          .skill__title #{skill}
+          #skills-component
     section.works
-      .container
+      .container.works__container
         .section-title.works__title Мои работы
         .works__content
-          .works-preview 
-            .works-preview__pictures(data-slide="2")
-              +image("content/slider-1.jpg", "works-preview__image", "work-preview-image")
-              .works-preview__thumbs
-                ul.thumbs
-                  - for (var i = 4; i > 0; i--)
-                    li.thumbs__item
-                      a(href="").thumbs__link
-                        +image(`content/slider-${i}.jpg`, "thumbs__pic", "thumbs-picture")
-              .works-preview__btns
-                .square-btns
-                  button(type="button").square-btns__item.square-btns__item--next
-                  button(type="button").square-btns__item.square-btns__item--prev
-            .works-preview__info
-              - var tags = ["HTML", "CSS", "JavaScript"];
-              ul.tags
-                each item in tags
-                  li.tags__item
-                    .tag #{item}
-              .works-preview__title Сайт школы образования
-              .works-preview__desc
-                p Этот парень проходил обучение #[br] веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-              a(href="").iconed-link Посмотреть сайт
+          #preview-component
+
     section.reviews
-      .container
-        .slider
-          .slider__header
-            .section-title.slider__title Что обо мне говорят
-            .slider__buttons
-              button(type="button").slider__btn.round-btn.round-btn--pointer-right 
-              button(type="button").slider__btn.round-btn.round-btn--pointer-left
-          ul.slider__content
-            li.slider__item
-              .quote
-                .quote__text
-                  p Этот парень проходил обучение #[br] веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                .quote__user
-                  .user-display
-                    .user-display__avatar
-                      .user-display__avatar-style
-                        +image("content/user.jpg", "user-display__pic", "director-photo")
-                    .user-display__data
-                      .user-display__name Ковальчук Дмитрий
-                      .user-display__occ Основатель Loftschool
-            li.slider__item
-              .quote
-                .quote__text
-                  p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                .quote__user
-                  .user-display
-                    .user-display__avatar
-                      .user-display__avatar-style
-                        +image("content/user.jpg", "user-display__pic", "web-master-photo")
-                    .user-display__data
-                      .user-display__name Владимир Сабанцев
-                      .user-display__occ Преподаватель
+      .container.reviews__container
+        #slider-component
+        
       footer.footer
         .container.footer__container
           .footer__copyright
             .footer__copyright-col
               .footer__copyright-year &copy; 2020
             .footer__copyright-userinfo
-              .footer__copyright-name Владимир Астаханов
-              .footer__data-text Личный сайт #[br] веб-разработчика
+              .footer__copyright-name Юрий Лопухин
+              .footer__data-text Личный сайт веб-разработчика
           .footer__data
             nav.menu.menu--color-white.footer__data-menu
               ul.menu__list
@@ -159,13 +92,14 @@ block content
             .footer__data-content
               .footer__data-col
                 .footer__data-text
-                  p Этот сайт я сделал в рамках обучения в #[br]  Школе онлайн образования Loftschool
+                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
                 .footer__data-socials
                   ul.socials.socials--round-borders
                     each item in socials
-                      li.socials__item
-                        a(href="#").socials__link
-                          +icon(item, 'socials__icon')
+                      li.socials__item-borders
+                          .socials__item
+                            a(href="#").socials__link
+                              +icon(item, 'socials__icon')
               .footer__data-col
                 .text-quote
                   .text-quote__text

@@ -2,6 +2,14 @@ section.values {
   @include desktop {
     min-height: 1020px;
   }
+
+  @include tablets {
+    min-height: 1222px;
+  }
+
+  @include phones {
+    min-height: 1488px;
+  }
 }
 
 .values {
@@ -13,44 +21,98 @@ section.values {
     position: absolute;
     top: 15%;
     left: 0;
-    z-index: 1;
+    z-index: 0;
   }
   
   @include desktop {
     &::before {
-    content: url("~images/bg/values-hands-bg-1200.png");
-    position: absolute;
-    top: 37%;
-    left: 0;
-    z-index: 1;
+      content: url("~images/bg/values-hands-bg-1200.png");
+      position: absolute;
+      top: 32.5%;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  @include tablets {
+    &::before {
+      content: url("~images/bg/values-hands-bg-768.png");
+      position: absolute;
+      bottom: -4px;
+      left: 18%;
+      top: auto;
+      right: auto;
+      z-index: 1;
+    }
+  }
+
+  @include phones {
+    &::before {
+      content: url("~images/bg/values-hands-bg-480.png");
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      top: auto;
+      right: auto;
+      z-index: 1;
     }
   }
 }
 
 .values__container {
-  padding-top: 142px;
+  padding-top: 180px;
+  z-index: 1;
+  width: 90%;
   
   @include desktop {
-    padding-top: 154px;
+    padding-top: 85px;
+  }
+
+  @include tablets {
+    padding-top: 103px;
+    text-align: center;
+  }
+
+  @include phones {
+    padding-top: 86px;
+    text-align: left;
   }
 }
 
 .values__widget {
   display: flex;
   justify-content: flex-end;
-  padding: 5.3% 13.5% 0 0;
 
   @include desktop {
-    padding: 0 10.5% 0 0;
+    padding: 0;
+  }
+
+  @include tablets {
+    padding: 0;
+    justify-content: center;
   }
 }
 
 .values__title {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
 
   @include desktop {
-    margin-bottom: 100px;
+    margin-bottom: 102px;
+  }
+
+  @include tablets {
+    margin-bottom: 57px;
+    text-align: center;
+  }
+
+  @include phones {
+    padding-left: 15px;
+    margin-bottom: 80px;
+    text-align: left;
+    align-items: flex-start;
   }
 }
 
@@ -58,10 +120,29 @@ section.values {
   font-weight: bold;
   font-size: 30px;
   margin-bottom: 3.5%;
+  z-index: 1;
 
   @include desktop {
-    padding-left: 26.3%;
+    padding-right: 5.5%;
+    text-align: left;
     letter-spacing: 1.2px;
+    margin-bottom: 42px;
+  }
+
+  @include tablets {
+    padding: 0 25%;
+    font-size: 33px;
+    margin-bottom: 32px;
+    text-align: center;
+    letter-spacing: .8px;
+  }
+
+  @include phones {
+    font-size: 26px;
+    line-height: 1.6;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
   }
 }
 
@@ -73,13 +154,19 @@ section.values {
   line-height: 1.9;
 
   @include desktop {
-    padding: 0 20% 0 26.5%;
+    padding: 0 19% 0 25.5%;
     letter-spacing: .6px;
     line-height: 2;
   }
-}
 
-.skills-row__title {
-  font-weight: bold;
-  font-size: 24px;
+  @include tablets {
+    padding: 0 16%;
+    letter-spacing: 0;
+    line-height: 1.75;
+  }
+
+  @include phones {
+    padding: 0;
+    line-height: 1.75;
+  }
 }

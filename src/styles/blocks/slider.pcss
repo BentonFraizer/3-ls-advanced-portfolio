@@ -1,16 +1,61 @@
 .slider {
   padding-top: 131px;
+
+  @include desktop {
+    padding-top: 151px;
+  }
+
+  @include tablets {
+    padding-top: 139px;
+  }
+
+  @include phones {
+    padding-top: 81px;
+  }
 }
 
 .slider__header {
   display: flex;
   justify-content: space-between;
   max-width: 638px;
+  
+  @include desktop {
+    max-width: 680px;
+  }
+  
+  @include tablets {
+    max-width: 557px;
+    margin-bottom: 53px;
+  }
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
 }
 
-.slider__title {
+.slider__header .slider__title {
   padding-top: 4px;
   margin-bottom: 12%;
+
+  @include desktop {
+    letter-spacing: 1.3px;
+    margin-bottom: 12.5%;
+  }
+
+  @include tablets {
+    font-size: 32px;
+    padding-top: 8px;
+    margin-bottom: 0;
+  }
+
+  @include phones {
+    padding-top: 0;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
 }
 
 .slider__btn {
@@ -20,19 +65,26 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @include desktop {
+    margin-right: 34px;
+  }
 }
 
 .slider__content {
   display: flex;
+
+  @include phones {
+    overflow: hidden;
+  }
 }
 
-.slider__item {
-  position: relative;
-  margin-left: 98px;
-  margin-right: 75px;
-  max-width: 330px;
-  
-  
+/* Был класс .slider__item*/
+.swiper-slide { 
+  margin-left: 8.1%;
+  margin-right: 1%;
+  max-width: 41%;
+
   &:before {
     display: block;
     content: '';
@@ -42,5 +94,30 @@
     position: absolute;
     top: 2%;
     right: 106%;
+  }
+
+  @include tablets {
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:before {
+      display: block;
+      content: '';
+      background: svg-load('quote.svg', fill=#303133, width=45px, height=34px);
+      width: 45px;
+      height: 36px;
+      position: absolute;
+      top: 1%;
+      right: 103%;
+    }
+  }
+
+  @include phones {
+    &:before {
+      display: none;
+    }
+    min-width: 100%;
   }
 }

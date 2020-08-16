@@ -3,16 +3,24 @@
   display: flex;
 }
 
+.thumbs__link {
+  padding: 0;
+}
+
 .thumbs__item {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
-  
-  &:first-child {
-    border: 3px solid #ff9a00;
-  }
 }
 
 .thumbs__pic {
   height: 97px;
   width: 100%;
+
+  @include desktop {
+    height: 70px;
+  }
+}
+
+.thumbs .thumbs__item.active {
+  border: 3px solid #ff9a00;
 }

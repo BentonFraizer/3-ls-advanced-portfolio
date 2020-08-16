@@ -4,6 +4,10 @@
   position: relative;
   min-height: 106px;
   background: #333C49;
+
+  @include desktop {
+    min-height: 75px;
+  }
 }
 
 .square-btns__item {
@@ -22,6 +26,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: .5;
   }
 
   &:last-child:after {
@@ -35,5 +40,151 @@
     left: 50%;
     transform: translate(-50%, -50%) rotate(180deg);
     opacity: .5;
+  }
+
+  @include desktop {
+    width: 35px;
+    height: 35px;
+
+    &:first-child:before {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=8px, height=15px);
+      height: 15px;
+      width: 8px;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: .5;
+    }
+
+    &:last-child:after {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=8px, height=15px);
+      height: 15px;
+      width: 8px;
+      position: absolute;
+      top: 61%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      opacity: .5;
+    }
+  }
+
+  @include phones {
+    width: 62px;
+    height: 63px;
+
+    &:first-child:before {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+      height: 21px;
+      width: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: .5;
+    }
+
+    &:last-child:after {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+      height: 21px;
+      width: 12px;
+      position: absolute;
+      top: 49%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      opacity: .5;
+    }
+  }
+}
+
+.square-btns__item.active {
+  &:first-child:before {
+    display: block;
+    content: '';
+    background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+    height: 19px;
+    width: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  &:last-child:after {
+    display: block;
+    content: '';
+    background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+    height: 19px;
+    width: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    opacity: 1;
+  }
+
+  @include desktop {
+    &:first-child:before {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=8px, height=15px);
+      height: 15px;
+      width: 8px;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    &:last-child:after {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=8px, height=15px);
+      height: 15px;
+      width: 8px;
+      position: absolute;
+      top: 61%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      opacity: 1;
+    }
+  }
+
+  @include phones {
+    &:first-child:before {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+      height: 21px;
+      width: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    &:last-child:after {
+      display: block;
+      content: '';
+      background: svg-load('arrow-right1.svg', fill=#fff, width=12px, height=19px);
+      height: 21px;
+      width: 12px;
+      position: absolute;
+      top: 49%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      opacity: 1;
+    }
   }
 }

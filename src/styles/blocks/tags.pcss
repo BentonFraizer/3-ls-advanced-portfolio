@@ -1,6 +1,20 @@
 .tags {
   display: flex;
   margin-bottom: 8%;
+
+  @include desktop {
+    margin-bottom: 11%;
+  }
+
+  @include tablets {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include phones {
+    margin-bottom: 18px;
+  }
 }
 
 .tags__item {
@@ -11,6 +25,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include desktop {
+    margin-right: 4%;
   }
 }
 
