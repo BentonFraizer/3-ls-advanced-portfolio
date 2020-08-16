@@ -1,40 +1,60 @@
 script(type="text/x-template")#preview-container
   .works-preview
-    display
-    info
+    display(
+      :currentWork="currentWork",
+      :works="works"
+      :currentIndex="currentIndex"
+      @slide="slide"
+    )
+    info(
+      :currentWork="currentWork"
+    )
     
 script(type="text/x-template")#preview-display
-  .works-preview__pictures(data-slide="2")
-    +image("content/slider-1.jpg", "works-preview__image", "work-preview-image")
+  .works-preview__pictures(:data-slide="currentIndex + 1")
+    img(:src="currentWork.photo").works-preview__img
     .works-preview__thumbs
-      thumbs
+      thumbs(
+        :works="notReversedWorks",
+        :currentWork="currentWork"
+      )
     .works-preview__btns
-      btns
+      btns(
+        @slide="$emit('slide', $event)"
+      )
 
 script(type="text/x-template")#preview-thumbs
   ul.thumbs
-    - for (var i = 4; i > 0; i--)
-      li.thumbs__item(class= (i === 4 ? "active" : undefined))
-        a(href="").thumbs__link
-          +image(`content/slider-${i}.jpg`, "thumbs__pic", "thumbs-picture")
+    li.thumbs__item(
+      v-for="slide in works" :key="slide.id"
+      :class="{active: currentWork.id === slide.id}"
+    )
+      button.thumbs__link
+        img(:src="slide.photo").thumbs__pic
 
 script(type="text/x-template")#preview-btns
   .square-btns 
-    button(type="button").square-btns__item.square-btns__item--next
-    button(type="button").square-btns__item.square-btns__item--prev
+    button(
+      type="button"
+      @click="$emit('slide', 'next')"
+    ).square-btns__item.square-btns__item--next
+    button(
+      type="button"
+      @click="$emit('slide', 'prev')"
+    ).square-btns__item.square-btns__item--prev
 
 script(type="text/x-template")#preview-info
   .works-preview__info
-    .works-prewiew__tags
-      tags
-    .works-preview__title Сайт школы образования
+    .works-preview__tags
+      tags(
+        :tags="tagsArray"
+      )
+    .works-preview__title {{currentWork.title}}
     .works-preview__desc
-      p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-    a(href="").iconed-link Посмотреть сайт
+      p {{currentWork.desc}}
+    a(:href="currentWork.link").iconed-link Посмотреть сайт
 
 script(type="text/x-template")#preview-tags
-  - var tags = ["HTML", "CSS", "JavaScript"];
   ul.tags
-    each item in tags
-      li.tags__item
-        .tag #{item}
+    li.tags__item(v-for="tag in tags")
+      .tag {{tag}}
