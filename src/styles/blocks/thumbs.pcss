@@ -6,10 +6,6 @@
 .thumbs__item {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
-  
-  &:first-child {
-    border: 3px solid #ff9a00;
-  }
 }
 
 .thumbs__pic {
@@ -19,4 +15,8 @@
   @include desktop {
     height: 70px;
   }
+}
+
+.thumbs .thumbs__item.active {
+  border: 3px solid #ff9a00;
 }

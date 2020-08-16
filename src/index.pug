@@ -26,7 +26,7 @@ block content
 
         .userinfo
           .userinfo__title Личный сайт #[br] веб разработчика
-          .userinfo__name Владимир Астаханов
+          .userinfo__name Юрий Лопухин
 
         .hero__bottom-buttons
           button.scroll-down-btn Скролл
@@ -52,7 +52,7 @@ block content
                   td.user__data-content #{item[1]}
         .about__content
           .about__desc Привет, меня зовут
-          .about__title Владимир Астаханов
+          .about__title Юрий Лопухин
           .about__text-info
             p Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
           .about__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
@@ -75,7 +75,7 @@ block content
               .works-preview__thumbs
                 ul.thumbs
                   - for (var i = 4; i > 0; i--)
-                    li.thumbs__item
+                    li.thumbs__item(class= (i === 4 ? "active" : undefined))
                       a(href="").thumbs__link
                         +image(`content/slider-${i}.jpg`, "thumbs__pic", "thumbs-picture")
               .works-preview__btns
@@ -131,7 +131,7 @@ block content
             .footer__copyright-col
               .footer__copyright-year &copy; 2020
             .footer__copyright-userinfo
-              .footer__copyright-name Владимир Астаханов
+              .footer__copyright-name Юрий Лопухин
               .footer__data-text Личный сайт веб-разработчика
           .footer__data
             nav.menu.menu--color-white.footer__data-menu
