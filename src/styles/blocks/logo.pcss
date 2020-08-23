@@ -8,3 +8,13 @@
     font-size: 38px;
   }
 }
+
+.logo--disabled {
+  @include tablets {
+    display: none;
+  }
+
+  @include phones {
+    display: none;
+  }
+}

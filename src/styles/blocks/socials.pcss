@@ -44,3 +44,21 @@ svg.socials__icon {
     padding-right: 2%;
   }
 }
+
+
+.socials--menu-active {
+  @include phones {
+    margin: 0 10%;
+    z-index: 1001;
+    display: flex;
+
+    svg.socials__icon {
+      fill: #414C63;
+      opacity: 1;
+    }
+
+    .socials__item {
+      margin-right: 30px;
+    }
+  }
+}

@@ -35,3 +35,25 @@
 .menu__link {
   text-decoration: none;
 }
+
+.menu.menu-active {
+  @include phones {
+    .menu__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu__item {
+      margin-right: 0;
+      margin-bottom: 22px;
+    }
+
+    color: #414C63;
+    display: flex;
+    z-index: 1001;
+    font-size: 6vmin;
+    font-weight: 600;
+    margin: 115px 0 139px 9%;
+    transition:all .4s;
+  }
+}

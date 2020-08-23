@@ -34,3 +34,35 @@
     margin-bottom: 0;
   }
 }
+
+.hamburger--menu-active {
+  @include tablets {
+    z-index: 1001;
+    transition:all .4s;
+    position: absolute;
+    height: 30px;
+    right: 2px;
+    top: 63px;
+  }
+
+  .hamburger__plank {
+    background-color: #414C63;
+  }
+}
+
+.hamburger__plank--menu-active {
+  @include tablets {
+    transition:all .4s;
+    &:nth-child(1){
+      opacity:0;
+    }
+
+    &:nth-child(2){
+      transform:rotate(45deg);
+    }
+
+    &:nth-child(3){
+      transform:rotate(-45deg) translateY(-8px) translateX(8px);
+    }
+  }
+}

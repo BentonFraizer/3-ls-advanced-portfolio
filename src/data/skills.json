@@ -1,16 +1,16 @@
 [
   {
     "id": 1,
-    "category": "Frontend",
+    "category": "Front-end",
     "skills": [
       {
         "id": 1,
-        "title": "HTML",
+        "title": "HTML5",
         "percent": 12.5
       },
       {
         "id": 2,
-        "title": "CSS",
+        "title": "CSS3",
         "percent": 25
       },
       {

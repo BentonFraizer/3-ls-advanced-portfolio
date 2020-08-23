@@ -13,7 +13,14 @@ new Vue ({
       reviews: [],
       sliderOptions: {
         slidesPerView: 2,
-        disabledClass: 'swiper-button-disabled'
+        breakpoints: {
+          480: {
+            slidesPerView: 2
+          },
+          320: {
+            slidesPerView: 1
+          }
+        }
       }
     }
   },
